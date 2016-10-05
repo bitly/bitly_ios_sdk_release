@@ -1,6 +1,6 @@
 # Bitly iOS SDK
 
-![Supported Platforms](https://img.shields.io/cocoapods/p/Charts.svg) ![Releases](https://img.shields.io/github/release/bitly/bitly_ios_sdk.svg) [![Latest pod release](https://img.shields.io/cocoapods/v/BitlySDK.svg)](http://cocoapods.org/pods/BitlySDK) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.com/bitly/bitly_ios_sdk.svg?token=GQk2M5gzMUKUJCESKF18&branch=master)](https://travis-ci.com/bitly/bitly_ios_sdk)
+![Supported Platforms](https://img.shields.io/cocoapods/p/BitlySDK.svg) ![Releases](https://img.shields.io/github/release/bitly/bitly_ios_sdk_release.svg) [![Latest pod release](https://img.shields.io/cocoapods/v/BitlySDK.svg)](http://cocoapods.org/pods/BitlySDK) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.com/bitly/bitly_ios_sdk.svg?token=GQk2M5gzMUKUJCESKF18&branch=master)](https://travis-ci.com/bitly/bitly_ios_sdk)
 
 ## Getting Started
 If you do not have any mobile apps setup in your Bitly account you will need to refer to the user guide for setting up deep links in your account.  
