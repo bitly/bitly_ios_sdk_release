@@ -7,17 +7,17 @@ If you do not have any mobile apps setup in your Bitly account you will need to 
 
 Once you have setup your mobile app in your account, go to Your Settings -> Advanced -> Deep Link Applications.  There you will find the Bitly App ID which needs to be included in your SDK configuration.
 
-The domain referenced in the code examples below will be the Bitly Bitly Branded Domain which is enabled for Universal Links.
+The domain referenced in the code examples below will be the Bitly Branded Domain which is enabled for Universal Links.
 
 ## Enable Universal Links
-To create the apple site association file on your domain you must send your Apple app ID to your Bitly Account Manager to enable.
+To create the Apple site association file on your domain you must send your Apple app ID to your Bitly Account Manager to enable.
 
-The Apple app ID is your team ID and bundle ID joined with a period.  In the Apple’s Developer Portal your team ID appears on Organization Profile > Account Summary.  When you enter the Member Center on http://developer.apple.com, click you name on the top right and click on “View Account” and you will find your team ID under the Developer Account Summary.
+The Apple app ID is your team ID and bundle ID joined with a period (ex - 1A234H7ABC.com.yourdomain.YourApp).  In the Apple’s Developer Portal your team ID appears on Organization Profile > Account Summary.  When you enter the Member Center on http://developer.apple.com, click you name on the top right and click on “View Account” and you will find your team ID under the Developer Account Summary.
 
 ## Install the SDK
 
 ### CocoaPods
-1. Add the following your Podfile
+1. Add the following to your Podfile
 
   ```
   pod 'BitlySDK'
@@ -29,7 +29,7 @@ The Apple app ID is your team ID and bundle ID joined with a period.  In the App
   ```
 
 ### Carthage
-1. Add the following your Cartfile
+1. Add the following to your Cartfile
 
   ```
   github "bitly/bitly_ios_sdk_release"
