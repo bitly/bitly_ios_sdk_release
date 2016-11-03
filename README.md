@@ -58,7 +58,7 @@ The Apple app ID is your team ID and bundle ID joined with a period (ex - 1A234H
 
   **Objective-C**
   ```objective-c
-  #import <BitlySDK/BitlySDK-Swift.h>
+  #import <BitlySDK/BitlySDK.h>
   ```
 2. Initialize the SDK on application initialization
 
@@ -88,29 +88,29 @@ The Apple app ID is your team ID and bundle ID joined with a period (ex - 1A234H
   }
   ```
 
-  > By default the Bitly SDK utilizes the IDFV to identify the user. If you which to use the IDFA to track the user simply call the `initializeWithDeviceId` method when initializing the SDK.
-  > You can also provide the access token for shortening with the `initializeWithShortening` and `initializeWithDeviceIdAndShortening` methods.
+  > By default the Bitly SDK utilizes the IDFV to identify the user. If you which to use the IDFA to track the user simply provide the `deviceId` to the appropriate method when initializing the SDK.
+  > You can also provide the access token for shortening with the `accessToken` provided to the initializing methods.
 
 3. Handle incoming links
 
   **Swift**
   ```swift    
-  func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
-      return Bitly.handleUserActivity(userActivity)
+  func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+      return Bitly.handle(userActivity)
   }
 
-  func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-      return Bitly.handleOpenUrl(url);
+  func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+      return Bitly.handleOpen(url)
   }
   ```
 
   **Objective-C**
   ```objective-c
-  - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler {
+  - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray *restorableObjects))restorationHandler {
       return [Bitly handleUserActivity:userActivity];
   }
 
-  - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+  - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
       return [Bitly handleOpenUrl:url];
   }
   ```
@@ -141,7 +141,7 @@ The Apple app ID is your team ID and bundle ID joined with a period (ex - 1A234H
 
   **Objective-C**
   ```objective-c
-  #import <BitlySDK/BitlySDK-Swift.h>
+  #import <BitlySDK/BitlySDK.h>
   ```
 
 3. Initialize the SDK on application initialization
@@ -149,7 +149,7 @@ The Apple app ID is your team ID and bundle ID joined with a period (ex - 1A234H
   **Swift**
   ```swift
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-      Bitly.initializeShortening("YOUR_APP_ACCESS_TOKEN")
+      Bitly.initialize("YOUR_APP_ACCESS_TOKEN")
       return true
   }
   ```
@@ -157,7 +157,7 @@ The Apple app ID is your team ID and bundle ID joined with a period (ex - 1A234H
   **Objective-C**
   ```objective-c
   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-      [Bitly initializeShortening:@"YOUR_APP_ACCESS_TOKEN"];
+      [Bitly initialize:@"YOUR_APP_ACCESS_TOKEN"];
       return YES;
   }
   ```    
