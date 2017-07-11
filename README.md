@@ -3,16 +3,11 @@
 ![Supported Platforms](https://img.shields.io/cocoapods/p/BitlySDK.svg) ![Releases](https://img.shields.io/github/release/bitly/bitly_ios_sdk_release.svg) [![Latest pod release](https://img.shields.io/cocoapods/v/BitlySDK.svg)](http://cocoapods.org/pods/BitlySDK) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.com/bitly/bitly_ios_sdk.svg?token=GQk2M5gzMUKUJCESKF18&branch=master)](https://travis-ci.com/bitly/bitly_ios_sdk) [![Coverage Status](https://coveralls.io/repos/github/bitly/bitly_ios_sdk/badge.svg?t=xurvl2)](https://coveralls.io/github/bitly/bitly_ios_sdk)
 
 ## Getting Started
-If you do not have any mobile apps setup in your Bitly account you will need to refer to the user guide for setting up deep links in your account.  
+Before integrating the SDK you will need to configure your mobile app in Bitly. To do this go to Brand Manager -> Mobile Apps. When creating the iOS app you will need to provide your Apple ID. The Apple ID is your team ID and bundle ID joined with a period (ex - 1A234H7ABC.com.yourdomain.YourApp).  In the Apple’s Developer Portal your team ID appears on Organization Profile > Account Summary.  When you enter the Member Center on http://developer.apple.com, click you name on the top right and click on “View Account” and you will find your team ID under the Developer Account Summary.
 
-Once you have setup your mobile app in your account, go to Your Settings -> Advanced -> Deep Link Applications.  There you will find the Bitly App ID which needs to be included in your SDK configuration.
+Once the app is created the app ID required later will be available on the app detail panel.  Copy it for later in the setup.
 
-The domain referenced in the code examples below will be the Bitly Branded Domain which is enabled for Universal Links.
-
-## Enable Universal Links
-To create the Apple site association file on your domain you must send your Apple app ID to your Bitly Account Manager to enable.
-
-The Apple app ID is your team ID and bundle ID joined with a period (ex - 1A234H7ABC.com.yourdomain.YourApp).  In the Apple’s Developer Portal your team ID appears on Organization Profile > Account Summary.  When you enter the Member Center on http://developer.apple.com, click you name on the top right and click on “View Account” and you will find your team ID under the Developer Account Summary.
+To create the Apple Site Association File, which would be located at https://yourdomain.com/.well-known/apple-app-site-association, you must got to Branded Short Domains -> yourdomain.com -> Mobile Behavior and associate the newly created iOS App with your domain. After saving the changes you can validate the file exists.
 
 ## Install the SDK
 
