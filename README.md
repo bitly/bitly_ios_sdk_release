@@ -73,7 +73,7 @@ To create the Apple Site Association File, which would be located at https://you
   **Objective-C**
   ```objective-c
   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-      [Bitly initialize:@"YOUR_APP_ID" supportedDomains:[NSArray arrayWithObjects: @"yourdomain.com", @"yourotherdomain.com", nil] supportedDomains:[NSArray arrayWithObjects: @"yourscheme", nil] handler:^(BitlyResponse * response, NSString * error) {
+      [Bitly initialize:@"YOUR_APP_ID" supportedDomains:[NSArray arrayWithObjects: @"yourdomain.com", @"yourotherdomain.com", nil] supportedSchemes:[NSArray arrayWithObjects: @"yourscheme", nil] handler:^(BitlyResponse * response, NSString * error) {
           // response provides a BitlyResponse object which contains the full URL information
           // response includes a status code
           // error provides any errors in retrieving information about the URL
