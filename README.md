@@ -3,7 +3,7 @@
 ![Supported Platforms](https://img.shields.io/cocoapods/p/BitlySDK.svg) ![Releases](https://img.shields.io/github/release/bitly/bitly_ios_sdk_release.svg) [![Latest pod release](https://img.shields.io/cocoapods/v/BitlySDK.svg)](http://cocoapods.org/pods/BitlySDK) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.com/bitly/bitly_ios_sdk.svg?token=GQk2M5gzMUKUJCESKF18&branch=master)](https://travis-ci.com/bitly/bitly_ios_sdk) [![Coverage Status](https://coveralls.io/repos/github/bitly/bitly_ios_sdk/badge.svg?t=xurvl2)](https://coveralls.io/github/bitly/bitly_ios_sdk)
 
 ## Getting Started
-Before integrating the SDK you will need to configure your mobile app in Bitly. To do this go to Brand Manager -> Mobile Apps. When creating the iOS app you will need to provide your Apple ID. The Apple ID is your team ID and bundle ID joined with a period (ex - 1A234H7ABC.com.yourdomain.YourApp).  In the Apple’s Developer Portal your team ID appears on Organization Profile > Account Summary.  When you enter the Member Center on http://developer.apple.com, click you name on the top right and click on “View Account” and you will find your team ID under the Developer Account Summary.
+Before integrating the SDK you will need to configure your mobile app in Bitly. To do this go to Brand Manager -> Mobile Apps. When creating the iOS app you will need to provide your Apple ID. The Apple ID is your team ID and bundle ID joined with a period (ex - 1A234H7ABC.com.yourdomain.YourApp).  In the Apple’s Developer Portal your team ID appears on Organization Profile > Account Summary.  When you enter the Member Center on http://developer.apple.com, click you name on the top right and click on “View Account” and you will find your team ID under the Developer Account Summary. If you choose to implement a Custom Scheme you may enter it at app creation time as well.
 
 Once the app is created the app ID required later will be available on the app detail panel.  Copy it for later in the setup.
 
@@ -43,7 +43,15 @@ To create the Apple Site Association File, which would be located at https://you
 4. Click on the + button and add your domain as `applinks:yourdomain.com`
 5. Ensure that the yourprojectname.entitlements file is added to the appropriate build target
 
-## Configure the SDK for Universal Links
+## Configure the Custom Scheme
+1. In Xcode open your Info.plist
+2. Add a row for "URL types" as an array
+3. Add an entry to that array as "URL Schemes" also as an array
+4. Add a row with your custom scheme as the value
+
+  > Custom Schemes are the older way of handling deep linking. However having an app that supports both Universal Links and Custom Schemes allows Bitly to work with Facebook App Links, Facebook Ads and other apps that launch content utilizing Custom Scheme deep links.
+
+## Configure the SDK for Deep Links
 1. Import the SDK in your AppDelegate
 
   **Swift**
