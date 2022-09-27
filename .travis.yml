@@ -1,9 +1,0 @@
-language: objective-c
-deploy:
-  provider: releases
-  api_key:
-    secure: MnZG07B4oN4Yz3+UsVT+JWAQKXT9ZMzrsFmbfl0GwQEiEXJpaqLEC5mumUadxcIUt1nbu+r2lB8V/iv+kp1h1lF+wzqfhOrTRaI4TGTV21XWkabb+ayoKqPgynkzndTLFF4Bl7YrnYwRhtu+eG3tgAzApofM7pAkRIgYJWpyIvVoy6K8tx9buLKYxUw2zpuhwKhPExOTJjSq/dA8t937f0UO2LKaq0J9fin9f3LTWKHdTJA8wBmsh3yC83Yrz6mw0jkFY1OErR2R5eQGyimxjHEVT/U4SNRGffzj1D2xRiSJ+LNRMq795EQP13MSPKiDl9aJej1EbcLJ+F/ObF4Ik7eVmn2wKqJT8bgk+kkr+UMQqX6SdtnstEVXimWahp30pr8sUQwHNYFECbFMD++olVS2UBXccAIimXtA2QfFr90ynsHrw5kzLBBU7McY6UqteEJYiQ8ah9356J9XSZlMNmJiM9cgIlbuvxf/PSFugQMD7C1KIcgeicDk7vF0WhGupshJ1g2GGC3b+qZG3xG+7clzZMS+Bh/bvQiBPPQAueZX4Sr3ETYo8STjt/CbYR2qUCQxKeBrS2G7vRY675bWMT1TnEGv+wF5gJ9sLZl6C1B2z92SoDnc2mPuwRW4iclz/8+isUSy166vblHBH6+mvpSNcU6JOYX5r+hfGx9sZDU=
-  file: BitlySDK.framework.zip
-  skip_cleanup: true
-  on:
-    tags: true
